@@ -1,9 +1,15 @@
 # README
 
 Clone the repo.
-The deployment uses a working queue `default_work_queue`.
+The deployment uses a working queue `default_work_queue`:
+```bash
+prefect deployment build --name flow_function_using_pool -q default_work_queue flows.py:flow_function_using_pool
+```
 
-The concurrency limit is set to 1 when applying the flow: `prefect deployment apply --limit 1 flow_function_using_pool-deployment.yaml`
+The concurrency limit is set to 1 when applying the flow: 
+```bash
+prefect deployment apply --limit 1 flow_function_using_pool-deployment.yaml
+```
 
 Set the logging level to debug:
 ```bash
