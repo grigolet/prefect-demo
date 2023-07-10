@@ -27,3 +27,5 @@ Start the server on a separate shell
 ```bash
 prefect server start
 ```
+
+To test the issue, trigger the execution of `flow_function_using_pool` with some dummy values (e.g. `[1,2,3]`)
